@@ -10,6 +10,6 @@ public class TestController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello from DevOps Pipeline 🚀 updated!!!";
+        return "Hello from DevOps Pipeline 🚀 updated, Hello!!!";
     }
 }
