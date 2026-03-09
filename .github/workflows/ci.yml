@@ -33,7 +33,7 @@ jobs:
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t ghcr.io/${{ github.repository }}:latest -f docker/Dockerfile .
+        run: docker build -t ghcr.io/saravana601/devops-demo:latest -f docker/Dockerfile .
 
       - name: Push Docker Image
-        run: docker push ghcr.io/${{ github.repository }}:latest
+        run: docker push ghcr.io/saravana601/devops-demo:latest
