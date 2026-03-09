@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
 
@@ -13,7 +14,7 @@ jobs:
 
     steps:
 
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Java
@@ -22,8 +23,8 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Build project
+      - name: Build Maven Project
         run: mvn clean package
 
-      - name: Build Docker image
+      - name: Build Docker Image
         run: docker build -t devops-demo -f docker/Dockerfile .
